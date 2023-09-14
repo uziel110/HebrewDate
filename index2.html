@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<!-- <script src="https://www.hebcal.com/etc/hdate-he-v2.js"> -->
+<!-- </script> -->
+<!-- </body> -->
+
+<!-- <body> -->
+    <p id="currentDate"></p>
+
+    <script>
+        // JavaScript code to display the current date in the format "dd.mm.yy"
+        function getCurrentDate() {
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, '0');
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const year = String(today.getFullYear()).slice(-2);
+            const formattedDate = `${day}.${month}.${year}`;
+            return formattedDate;
+        }
+
+        document.getElementById('currentDate').textContent = getCurrentDate();
+    </script>
+</body>
+</html>
+<!-- </html> -->
